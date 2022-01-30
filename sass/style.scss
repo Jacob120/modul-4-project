@@ -1,5 +1,9 @@
 /* Global */
 
+$font-header: "Montserrat", sans-serif;
+$font-subtitle: "PT Sans", sans-serif;
+$font-text: "Roboto Slab", serif;
+
 $color-main: #fed136;
 
 *,
@@ -11,8 +15,43 @@ $color-main: #fed136;
 body {
   margin: 0;
   text-align: center;
+  // font-family: $font-text;
 }
 
+section {
+  margin: 120px auto;
+}
+
+.section-title {
+  font-style: $font-header;
+  margin: 0;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  font-style: $font-subtitle;
+  margin-top: 16px-;
+  font-size: 16px;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.cards {
+  margin-top: 70px;
+}
+
+.card-title {
+  font-family: $font-header;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.card-description {
+  font-family: $font-text;
+  opacity: 0.7;
+}
 /* Navigation */
 
 .navsplash {
@@ -54,6 +93,15 @@ body {
   color: white;
 }
 
+.splash-title {
+  font-family: $font-header;
+  font-weight: 700;
+}
+
+.splash-subtitle {
+  font-family: $font-subtitle;
+}
+
 .splash {
   h1 {
     font-size: 74px;
@@ -77,4 +125,18 @@ body {
   min-width: 240px;
   padding: 20px 45px;
   border-radius: 5px;
+}
+
+/* Services */
+
+.cards {
+  i {
+    font-size: 40px;
+    color: $color-main;
+    width: 80px;
+    height: 80px;
+    border: 4px solid;
+    line-height: 70px;
+    border-radius: 50%;
+  }
 }
