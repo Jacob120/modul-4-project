@@ -15,7 +15,6 @@ $color-main: #fed136;
 body {
   margin: 0;
   text-align: center;
-  // font-family: $font-text;
 }
 
 .row {
@@ -50,11 +49,10 @@ body {
   font-family: $font-text;
   opacity: 0.7;
 }
+
 /* Navigation */
 
 .navsplash {
-  // display: flex;
-  // justify-content: space-between;
   padding: 50px 230px;
   height: 700px;
   position: relative;
@@ -64,9 +62,26 @@ body {
   background-attachment: fixed;
 }
 
+.navsplash::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  background: black;
+  z-index: 0;
+}
+
 .navbar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .navbar {
@@ -84,11 +99,22 @@ body {
     padding: 0 20px;
   }
 }
+
+.navbar-brand {
+  span {
+    color: $color-main;
+    font-family: "Dancing Script", cursive;
+    font-size: 26px;
+  }
+}
+
 /* Splash */
 
 .splash {
   margin-top: 160px;
   color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .splash-title {
@@ -184,7 +210,6 @@ body {
     font-size: 30px;
     color: white;
     margin: 10px;
-    // padding: 15px;
     background: black;
     border-radius: 50px;
     width: 50px;
@@ -200,5 +225,30 @@ body {
   .row {
     flex-direction: column;
     align-items: center;
+  }
+  .navsplash {
+    padding: 20px 20px;
+  }
+  .navsplash {
+    .navbar {
+      flex-wrap: wrap;
+      font-size: 12px;
+    }
+  }
+  .splash {
+    h3 {
+      font-size: 24px;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 32px;
+    }
+    .btn {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  }
+  .media-links {
+    padding: 0;
   }
 }
