@@ -231,9 +231,15 @@ body {
   }
   .navsplash {
     .navbar {
-      flex-wrap: wrap;
       font-size: 12px;
     }
+  }
+  .navbar-nav {
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  .splash {
+    margin-top: 80px;
   }
   .splash {
     h3 {
